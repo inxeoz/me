@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Solace | Existential Wonders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #bae6fd;
+            --grass-green: #4ade80;
+            --soft-cream: #fefce8;
+            --earth-brown: #78350f;
+            --cloud-white: #ffffff;
+            --accent-orange: #fb923c;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(to bottom, var(--sky-blue) 0%, var(--soft-cream) 100%);
+            background-attachment: fixed;
+            color: var(--earth-brown);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Painted Grass Effect at bottom */
+        body::after {
+            content: "";
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(transparent, var(--grass-green));
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Gaegu', cursive;
+            font-size: 4.5rem;
+            margin: 0;
+            color: #164e63;
+            text-shadow: 2px 2px var(--cloud-white);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1100px;
+            padding: 40px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            border: 3px solid var(--cloud-white);
+            border-radius: 40px 10px 40px 10px; /* Playful asymmetric shape */
+            padding: 30px;
+            text-decoration: none;
+            color: var(--earth-brown);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 0px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px) rotate(-1deg);
+            background: var(--cloud-white);
+            box-shadow: 0 12px 20px rgba(74, 222, 128, 0.2);
+        }
+
+        .card h3 {
+            font-family: 'Gaegu', cursive;
+            font-size: 2.2rem;
+            margin-top: 0;
+            color: #15803d;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Ghibli Doodles */
+        .floating-cloud {
+            position: absolute;
+            background: var(--cloud-white);
+            border-radius: 50px;
+            opacity: 0.8;
+            filter: blur(10px);
+            z-index: -1;
+            animation: drift 20s infinite linear;
+        }
+
+        @keyframes drift {
+            from { transform: translateX(-100px); }
+            to { transform: translateX(100vw); }
+        }
+
+        .flower-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+        }
+
+        footer {
+            padding: 60px;
+            font-family: 'Gaegu', cursive;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-cloud" style="top: 10%; width: 200px; height: 60px;"></div>
+    <div class="floating-cloud" style="top: 30%; width: 150px; height: 40px; animation-delay: -5s;"></div>
+
+    <header>
+        <h1>Wind on the Hill</h1>
+        <p class="subtitle">Finding meaning in the rustle of the leaves.</p>
+    </header>
+
+    <div class="grid">
+        <a href="nausea.html" class="card">
+            <h3>The Quiet Nausea</h3>
+            <p>A gentle look at the moments when the world feels too big, and we feel quite small.</p>
+            <span class="flower-icon">✿</span>
+        </a>
+
+        <a href="philosophy.html" class="card">
+            <h3>Meadow Thinkers</h3>
+            <p>Philosophy doesn't have to be cold. How to find warmth in the vastness of the universe.</p>
+            <span class="flower-icon">❀</span>
+        </a>
+
+        <a href="doodles.html" class="card">
+            <h3>Watercolor Dreams</h3>
+            <p>Sketches of train stations, grassy fields, and the snacks we eat while contemplating life.</p>
+            <span class="flower-icon">❁</span>
+        </a>
+
+        <a href="journey.html" class="card">
+            <h3>The Long Walk</h3>
+            <p>Every step is a choice. A guide to walking through your crisis with a picnic basket in hand.</p>
+            <span class="flower-icon">✾</span>
+        </a>
+    </div>
+
+    <footer>
+        The world is beautiful, even when it's confusing.
+    </footer>
+
+</body>
+</html>
